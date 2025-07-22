@@ -31,7 +31,7 @@ RUN python3 manage.py collectstatic --noinput
 RUN chown -R www-data:www-data /var/www/homework-website
 
 # Copy and enable Apache configuration
-COPY homework-website.conf /etc/apache2/sites-available/homework-website-http.conf
+COPY homework-website.conf /etc/apache2/sites-available/homework-website.conf
 RUN a2enmod wsgi ssl rewrite headers && \
     a2ensite homework-website.conf
 
