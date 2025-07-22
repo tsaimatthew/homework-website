@@ -1,7 +1,8 @@
 # Homework App
 
 [![Docker Image CI](https://github.com/matthewt-123/homework-website/actions/workflows/validate-image.yml/badge.svg)](https://github.com/matthewt-123/homework-website/actions/workflows/validate-image.yml)
-[![Deploy](https://github.com/matthewt-123/homework-website/actions/workflows/build-image.yml/badge.svg)](https://github.com/matthewt-123/homework-website/actions/workflows/build-image.yml)
+[![Docker Image Deploy](https://github.com/matthewt-123/homework-website/actions/workflows/deploy-image.yml/badge.svg)](https://github.com/matthewt-123/homework-website/actions/workflows/deploy-image.yml)
+
 
 **All-in-one assignment tracker and study companion.**  
 Built for high school and college students to take control of their academic life.
