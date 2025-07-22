@@ -2,24 +2,9 @@ version: '3'
 
 services:
   homework-website:
-    image: ghcr.io
+    image: ghcr.io/matthewt-123/homework-website:main
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
-      - ./apache-config:/etc/apache2/sites-enabled
-
-  certbot:
-    image: certbot/certbot
-    volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
-    entrypoint: >
-      sh -c "certbot certonly --webroot
-             --webroot-path=/var/www/certbot
-             --email your@email.com
-             --agree-tos
-             --no-eff-email
-             -d matthewtsai.uk"
+      - ./database:/etc/letsencrypt

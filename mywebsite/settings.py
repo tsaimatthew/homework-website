@@ -70,7 +70,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'integrations',
     'external',
-    'spotify'
+    'spotify',
+    'envMonitor'
 
 ]
 SITE_ID = 1

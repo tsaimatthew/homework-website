@@ -1,0 +1,35 @@
+{% extends "hwapp/layout.html" %}
+{% block title %}
+Add a Device
+{% endblock %}
+{% block body %}
+<table style="margin-left:35%">
+    <tr style="margin-left:35%">
+        <label for="devName">Device Name: </label> <input name="deviceName" id="deviceName"> <br>
+    </tr>
+    <tr style="margin-left:35%">
+        <label for="macAddr">MAC Address: </label> <input name="macAddr" id="macAddr"> <br>
+    </tr>
+    <tr style="margin-left:35%">
+        <label for="location">Location: </label> <input name="location" id="location"> <br>
+    </tr>
+    <tr style="margin-left:35%">
+        <button type="submit" class="btn btn-primary" onclick="addDevice()">Submit</button>
+    </tr>
+</table>
+
+<script>
+    function addDevice()
+    {
+        fetch(`{% url "addDevice" %}`, {
+            method: 'POST',
+            credentials: 'same-origin',
+            body: JSON.stringify({
+                deviceName: document.getElementById('deviceName').value,
+                macAddr: document.getElementById('macAddr').value,
+                location: `${document.getElementById('location').value}`,
+            })
+        })
+    }
+</script>
+{% endblock %}
