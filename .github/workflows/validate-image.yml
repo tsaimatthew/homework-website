@@ -20,7 +20,7 @@ jobs:
       
     - name: Run container
       run: |
-        docker run -d --rm --name homework-website -p 80:80 smv-api
+        docker run -d --rm --name homework-website -p 80:80 -p 443:443 homework-website
         sleep 5
         docker ps -a
 
@@ -36,7 +36,7 @@ jobs:
           sleep 3
         done
         echo "Django failed to start."
-        docker logs smv-test
+        docker logs homework-website
         exit 1
 
     - name: Stop container
