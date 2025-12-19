@@ -817,7 +817,7 @@ def helpformview(request, id):
             helpform.status = "Completed"
             helpform.save()
             new_response = HelpForm(parent_form=helpform, first_name=request.user.first_name, last_name=request.user.last_name, \
-                                    email = f"support@email.{os.environ.get("DOMAIN_NAME")}", received=datetime.now(), subject=f"[{os.environ.get("DOMAIN_NAME")}] Help Form: {request.POST['subject']}", message=request.POST['message'], status="Completed")
+                                    email = f"support@email.{os.environ.get('DOMAIN_NAME')}", received=datetime.now(), subject=f"[{os.environ.get('DOMAIN_NAME')}] Help Form: {request.POST['subject']}", message=request.POST['message'], status="Completed")
             new_response.save()
             return render(request, 'hwapp/success.html', {
                 'message': f"Message sent successfully. Click <a href='/helpformlist'>here</a> to return to the help form listing or \
