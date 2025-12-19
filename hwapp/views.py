@@ -813,11 +813,11 @@ def helpformview(request, id):
             tracking_info = f"---------------------------------------------------------------------------------------------------------------------------------------------- \
                 <div style='display:none;color:white;font-size:0%'>@@@@tracking_id={tracking_id}@@@@</div>"
             email_user(email=helpform.email, content=f"{request.POST['message']}{tracking_info}", \
-                       subject=f"[{os.environ.get("DOMAIN_NAME")}] Help Form: {request.POST['subject']}", recipient_name=helpform.first_name)
+                       subject=f"[{os.environ.get('DOMAIN_NAME')}] Help Form: {request.POST['subject']}", recipient_name=helpform.first_name)
             helpform.status = "Completed"
             helpform.save()
             new_response = HelpForm(parent_form=helpform, first_name=request.user.first_name, last_name=request.user.last_name, \
-                                    email = f"support@email.{os.environ.get("DOMAIN_NAME")}", received=datetime.now(), subject=f"[{os.environ.get("DOMAIN_NAME")}] Help Form: {request.POST['subject']}", message=request.POST['message'], status="Completed")
+                                    email = f"support@email.{os.environ.get('DOMAIN_NAME')}", received=datetime.now(), subject=f"[{os.environ.get('DOMAIN_NAME')}] Help Form: {request.POST['subject']}", message=request.POST['message'], status="Completed")
             new_response.save()
             return render(request, 'hwapp/success.html', {
                 'message': f"Message sent successfully. Click <a href='/helpformlist'>here</a> to return to the help form listing or \

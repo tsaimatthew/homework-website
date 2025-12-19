@@ -1,10 +1,11 @@
-version: '3'
-
 services:
-  homework-website:
-    image: ghcr.io/matthewt-123/homework-website:main
-    ports:
-      - "80:80"
-      - "443:443"
+  web:
+    image: ghcr.io/tsaimatthew/homework-website:main
     volumes:
-      - ./database:/etc/letsencrypt
+      - ./static:/var/www/homework-website/static
+      - ./media:/var/www/html/media
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    restart: always

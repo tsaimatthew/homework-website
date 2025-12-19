@@ -5,6 +5,7 @@ db.sqbpro
 push.sh
 .vscode
 envMonitor/keys
+certbot/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
