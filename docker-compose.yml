@@ -1,6 +1,6 @@
 services:
   web:
-    build: .
+    image: ghcr.io/tsaimatthew/homework-website:main
     volumes:
       - ./static:/var/www/homework-website/static
       - ./media:/var/www/html/media
