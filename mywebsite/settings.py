@@ -201,5 +201,5 @@ MEDIA_URL = "/media/"
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 20971520
 
-CSRF_TRUSTED_ORIGINS = ['http://matthewtsai.uk', 'htps://matthewtsai.uk"]
+CSRF_TRUSTED_ORIGINS = ['http://matthewtsai.uk', 'htps://matthewtsai.uk']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
