@@ -91,7 +91,7 @@ def notion_callback(request):
         }
         #b64 encode:
         import base64
-        secret = f"{os.environ.get("notion_client_id")}:{os.environ.get("notion_secret")}".encode('utf-8')
+        secret = f"{os.environ.get('notion_client_id')}:{os.environ.get('notion_secret')}".encode('utf-8')
         b64 = base64.b64encode(secret).decode('utf-8')
 
         response = requests.post(url, data=body, headers={"Authorization": f"Basic {b64}"})
