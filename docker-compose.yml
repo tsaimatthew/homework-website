@@ -4,6 +4,8 @@ services:
     volumes:
       - ./static:/var/www/homework-website/static
       - ./media:/var/www/html/media
-    expose:
-      - "8000"
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
     restart: always
