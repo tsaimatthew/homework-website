@@ -250,7 +250,7 @@ def canvas_hw():
             error = False
         data = json.loads(response.text)
         if str(response) != "<Response [200]>":
-            IntegrationLog.objects.create(user=class1.schoology_user, hw=f"Canvas Class Error: {class1.s_class_name}", src="canvas", dest="hwapp", url = url, date = datetime.datetime.now(), message=response.text, error=True)
+            IntegrationLog.objects.create(user=class1.schoology_user, hw_name=f"Canvas Class Error: {class1.s_class_name}", src="canvas", dest="hwapp", url = url, date = datetime.datetime.now(), message=response.text, error=True)
             class1.update = False
             class1.save()
             break
