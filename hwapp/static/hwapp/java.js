@@ -11,11 +11,15 @@ $('#non_functional_form').submit(function () {
     return false;
    });
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    var nav = document.getElementById("mySidenav");
+    nav.style.width = "250px";
+    nav.style.pointerEvents = "auto";
   }
   
   function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    var nav = document.getElementById("mySidenav");
+    nav.style.width = "0";
+    nav.style.pointerEvents = "none";
   }
 function show_item(id) {
     var show = document.getElementById(id).style.display
