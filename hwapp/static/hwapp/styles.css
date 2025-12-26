@@ -143,6 +143,7 @@ only screen and (max-width: 760px),
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	pointer-events: none;
   }
   
   /* The navigation menu links */
@@ -272,8 +273,10 @@ only screen and (max-width: 760px),
     display:none;
   }
 .mobile_nav {
-    margin-left: 110%;
-    display:block;
+	display: block;
+    margin-left: 0; /* Remove the 110% */
+    position: relative; 
+    z-index: 10;
 }
   .sidenav {
     height: 100%;
