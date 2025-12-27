@@ -267,10 +267,10 @@ table tr td {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   font-size: 18px;
-  font-weight:normal;
+  font-weight: normal;
   border-radius: 1%;
-  margin-left:1%;
-  width:8%
+  margin-left: 1%;
+  width: 8%;
 }
 .ics_form {
   margin-top:5%;

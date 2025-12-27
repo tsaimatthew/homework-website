@@ -44,9 +44,9 @@
                     <a class="nav-link settings_all" href="{% url 'settings' %}">My Settings</a>
                 </div>
                 <!-- Collections -->
-                <div id="collection_all" class="nav-item collection_all">
+                <div class="nav-item collection_all collection-dropdown-trigger">
                     <a class="nav-link collection_all" href="#">My Bookmarks</a>
-                    <div id="collection_all_dropdown" class="collection_all dropdown_css">
+                    <div class="collection_all dropdown_css collection-dropdown-menu">
                         <a href="{% url 'pastebin' %}"><span class="nav_item">
                             &nbsp Pastebin &nbsp
                         </span></a>
@@ -74,9 +74,9 @@
                 </div>
                 {% if request.user|has_group:"Custom Page Users" %}
                 <!-- Collections -->
-                <div id="collection_all" class="nav-item collection_all">
+                <div class="nav-item collection_all collection-dropdown-trigger">
                     <a class="nav-link collection_all" href="#">My Bookmarks</a>
-                    <div id="collection_all_dropdown" class="collection_all dropdown_css">
+                    <div class="collection_all dropdown_css collection-dropdown-menu">
                         <a href="{% url 'pastebin' %}" ><span class="nav_item">
                             &nbsp Pastebin &nbsp
                         </span></a>
@@ -101,9 +101,9 @@
                 {% else %}
                 {% if request.user|has_group:"Custom Page Users" %}
                 <!-- Collections -->
-                <div id="collection_all" class="nav-item collection_all">
+                <div class="nav-item collection_all collection-dropdown-trigger">
                     <a class="nav-link collection_all" href="#">My Bookmarks</a>
-                    <div id="collection_all_dropdown" class="collection_all dropdown_css">
+                    <div class="collection_all dropdown_css collection-dropdown-menu">
                         <a href="{% url 'pastebin' %}" ><span class="nav_item">
                             &nbsp Pastebin &nbsp
                         </span></a>
@@ -231,17 +231,24 @@ main {
         {% block footer %}{% endblock %}
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                elements = ['collection_all']
-                for (let i = 0; i < elements.length; i++) {
-                    //show menu on element hover
-                    document.getElementById(elements[i]).onmouseover = () => {
-                        document.getElementById(`${elements[i]}_dropdown`).style.display = "block";
+                // Use class-based selection for dropdown menus
+                const dropdownTriggers = document.querySelectorAll('.collection-dropdown-trigger');
+                
+                dropdownTriggers.forEach(trigger => {
+                    const dropdown = trigger.querySelector('.collection-dropdown-menu');
+                    
+                    if (dropdown) {
+                        // Show menu on element hover
+                        trigger.onmouseover = () => {
+                            dropdown.style.display = "block";
+                        };
+                        
+                        // Hide menu on mouse leaving
+                        trigger.onmouseleave = () => {
+                            dropdown.style.display = "none";
+                        };
                     }
-                    //hide menu on mouse leaving
-                    document.getElementById(elements[i]).onmouseleave = () => {
-                        document.getElementById(`${elements[i]}_dropdown`).style.display = "none";
-                    }
-                }
+                });
             })
         </script>
     </footer>
