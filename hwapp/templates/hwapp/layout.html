@@ -238,13 +238,29 @@ main {
                     const dropdown = trigger.querySelector('.collection-dropdown-menu');
                     
                     if (dropdown) {
-                        // Show menu on element hover
-                        trigger.addEventListener('mouseover', () => {
+                        let hideTimeout;
+                        
+                        // Show menu on trigger hover
+                        trigger.addEventListener('mouseenter', () => {
+                            clearTimeout(hideTimeout);
                             dropdown.style.display = "block";
                         });
                         
-                        // Hide menu on mouse leaving
-                        trigger.addEventListener('mouseleave', () => {
+                        // Delay hiding when leaving trigger
+                        trigger.addEventListener('mouseleave', (e) => {
+                            hideTimeout = setTimeout(() => {
+                                dropdown.style.display = "none";
+                            }, 100);
+                        });
+                        
+                        // Keep dropdown open when hovering over it
+                        dropdown.addEventListener('mouseenter', () => {
+                            clearTimeout(hideTimeout);
+                            dropdown.style.display = "block";
+                        });
+                        
+                        // Hide when leaving dropdown
+                        dropdown.addEventListener('mouseleave', () => {
                             dropdown.style.display = "none";
                         });
                     }
