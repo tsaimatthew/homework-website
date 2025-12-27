@@ -239,14 +239,14 @@ main {
                     
                     if (dropdown) {
                         // Show menu on element hover
-                        trigger.onmouseover = () => {
+                        trigger.addEventListener('mouseover', () => {
                             dropdown.style.display = "block";
-                        };
+                        });
                         
                         // Hide menu on mouse leaving
-                        trigger.onmouseleave = () => {
+                        trigger.addEventListener('mouseleave', () => {
                             dropdown.style.display = "none";
-                        };
+                        });
                     }
                 });
             })
