@@ -70,7 +70,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'integrations',
     'external',
-    'spotify'
+    'spotify',
+    'envMonitor'
 
 ]
 SITE_ID = 1
@@ -201,5 +202,9 @@ MEDIA_URL = "/media/"
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 20971520
 
-CSRF_TRUSTED_ORIGINS = ['http://matthewtsai.uk', 'htps://matthewtsai.uk']
+CSRF_TRUSTED_ORIGINS = ['http://matthewtsai.uk', 'https://matthewtsai.uk']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# MQTT Broker Configuration
+MQTT_BROKER_HOST = os.environ.get('MQTT_BROKER_HOST', 'mqtt.matthewtsai.uk')
+MQTT_BROKER_PORT = int(os.environ.get('MQTT_BROKER_PORT', '1883'))

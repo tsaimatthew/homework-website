@@ -27,6 +27,7 @@ urlpatterns = [
     path('integrations/', include('integrations.urls')),
     path('home/', include('external.urls')),
     path('spotify/', include('spotify.urls')),
+    path('environment/', include('envMonitor.urls'))
 ]
 
 
