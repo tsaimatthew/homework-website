@@ -6,7 +6,6 @@ from django.utils import timezone
 
 import re
 import json
-import threading
 from datetime import datetime, timedelta
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.backends import default_backend
@@ -14,13 +13,9 @@ from cryptography import x509
 from cryptography.x509.oid import NameOID
 from cryptography.hazmat.primitives import serialization, hashes
 
-from .mqtt import run
 from .models import Device, TemperatureReading, HumidityReading, PressureReading
 from .helper import DeviceSerializer, validateDevSerializer
 # Create your views here.
-
-thread = threading.Thread(target=run, name="MQTT_Subscribe", daemon=True)
-thread.start()
 
 def index(request):
     devices = Device.objects.filter(user=request.user)
