@@ -23,8 +23,9 @@ thread = threading.Thread(target=run, name="MQTT_Subscribe", daemon=True)
 thread.start()
 
 def index(request):
-    if len(Device.objects.filter(user=request.user)) > 0:
-        return True
+    devices = Device.objects.filter(user=request.user)
+    if devices.exists():
+        return render(request, "envMonitor/device_list.html", {"devices": devices})
     else:
         return HttpResponseRedirect(reverse("addDevice"))
 
