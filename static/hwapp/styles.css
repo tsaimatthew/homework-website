@@ -1,3 +1,51 @@
+/* Navigation Styles */
+.main-nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.nav-logo {
+    margin-right: 20px;
+}
+
+.nav-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-item {
+    position: relative;
+    padding: 10px 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.nav-user-info {
+    margin-left: auto;
+    padding: 10px 15px;
+    color: #666;
+}
+
 #hwlist {
     float: right;
 }

@@ -44,7 +44,7 @@
                     <a class="nav-link settings_all" href="{% url 'settings' %}">My Settings</a>
                 </div>
                 <!-- Collections -->
-                <div class="nav-item collection_all">
+                <div id="collection_all" class="nav-item collection_all">
                     <a class="nav-link collection_all" href="#">My Bookmarks</a>
                     <div id="collection_all_dropdown" class="collection_all dropdown_css">
                         <a href="{% url 'pastebin' %}"><span class="nav_item">
@@ -74,7 +74,7 @@
                 </div>
                 {% if request.user|has_group:"Custom Page Users" %}
                 <!-- Collections -->
-                <div class="nav-item collection_all">
+                <div id="collection_all" class="nav-item collection_all">
                     <a class="nav-link collection_all" href="#">My Bookmarks</a>
                     <div id="collection_all_dropdown" class="collection_all dropdown_css">
                         <a href="{% url 'pastebin' %}" ><span class="nav_item">
@@ -101,7 +101,7 @@
                 {% else %}
                 {% if request.user|has_group:"Custom Page Users" %}
                 <!-- Collections -->
-                <div class="nav-item collection_all">
+                <div id="collection_all" class="nav-item collection_all">
                     <a class="nav-link collection_all" href="#">My Bookmarks</a>
                     <div id="collection_all_dropdown" class="collection_all dropdown_css">
                         <a href="{% url 'pastebin' %}" ><span class="nav_item">
