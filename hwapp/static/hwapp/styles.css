@@ -95,6 +95,70 @@ a:hover {
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
+/* Table improvements */
+table.table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+table.table thead {
+    background-color: #f8f9fa;
+}
+
+table.table thead th,
+table.table thead td {
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #495057;
+}
+
+table tr td a {
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+table tr td a:hover {
+    color: #007bff;
+}
+
+/* Improved striped rows */
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Content wrapper for better spacing */
+main {
+  padding: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Alert improvements */
+.alert {
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 #hwlist {
     float: right;
 }
@@ -412,9 +476,3 @@ only screen and (max-width: 760px),
 *{-webkit-box-sizing:border-box;box-sizing:border-box}body{padding:0;margin:0}#notfound{position:relative;height:100vh}#notfound .notfound{position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.notfound{max-width:920px;width:100%;line-height:1.4;text-align:center;padding-left:15px;padding-right:15px}.notfound .notfound-404{position:absolute;height:100px;top:0;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);z-index:-1}.notfound .notfound-404 h1{font-family:maven pro,sans-serif;color:#ececec;font-weight:900;font-size:276px;margin:0;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.notfound h2{font-family:maven pro,sans-serif;font-size:46px;color:#000;font-weight:900;text-transform:uppercase;margin:0}.notfound p{font-family:maven pro,sans-serif;font-size:16px;color:#000;font-weight:400;text-transform:uppercase;margin-top:15px}.notfound a{font-family:maven pro,sans-serif;font-size:14px;text-decoration:none;text-transform:uppercase;background:#189cf0;display:inline-block;padding:16px 38px;border:2px solid transparent;border-radius:40px;color:#fff;font-weight:400;-webkit-transition:.2s all;transition:.2s all}.notfound a:hover{background-color:#fff;border-color:#189cf0;color:#189cf0}@media only screen and (max-width:480px){.notfound .notfound-404 h1{font-size:162px}.notfound h2{font-size:26px}}
 
 
-tr:nth-child(even) {
-  background-color: rgb(215, 215, 222);
-}
-tr:nth-child(odd) {
-  background-color: white;
-}
