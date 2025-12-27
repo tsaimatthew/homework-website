@@ -24,7 +24,7 @@ def connect_mqtt(client_id=client_id):
         keyfile=os.path.join(settings.BASE_DIR, "envMonitor", "keys", "client.key")
     )
     client.tls_insecure_set(False)
-    client.connect("mqtt.matthewtsai.uk", 1883)
+    client.connect(settings.MQTT_BROKER_HOST, settings.MQTT_BROKER_PORT)
     return client
 
 def store(msg):
