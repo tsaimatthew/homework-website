@@ -133,15 +133,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <h1 style="text-align:center; color: #333; margin-top: 3rem;"><b>
   Contact Us!
 </b></h1>
-<div class="toggle" id="contact" style="display:block; clear:both; padding: 2rem; max-width: 800px; margin: 0 auto;">
+<div class="contact-form-wrapper" id="contact">
   <div id="alert" class="alert alert-success" role="alert" style='display:none;'></div>
 <div id='error_message' class="alert alert-danger" role="alert" style='display:none;'></div>
-  <form action='{% url "contact" %}' method='POST' class='contact-form' autocomplete='off' autofocus='true' onsubmit='return false' style="background: #f8f9fa; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <form action='{% url "contact" %}' method='POST' class='contact-form' autocomplete='off' autofocus='true' onsubmit='return false'>
     {% csrf_token %}
-    <div style="max-width: 600px; margin: 0 auto;">
+    <div class="contact-form-inner">
       {{form.as_table}}
     </div>
-  <button style='margin-top: 1rem; background-color: #667eea; color: white; border: none; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; cursor: pointer;' id="submit" onclick="submit_form()" class="btn btn-primary">Submit</button>
+  <button id="submit" onclick="submit_form()" class="btn btn-primary btn-contact-submit">Submit</button>
 </form>
 
 </div>

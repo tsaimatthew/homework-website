@@ -1,3 +1,50 @@
+/* Dropdown menu links */
+.dropdown_css a {
+  text-decoration: none;
+}
+
+/* Mobile hamburger menu */
+.mobile-hamburger {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Contact form styling */
+.contact-form {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form-wrapper {
+  display: block;
+  clear: both;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn-contact-submit {
+  margin-top: 1rem;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-contact-submit:hover {
+  background-color: #5568d3;
+}
+
 /* Navigation Styles */
 .main-nav {
     display: flex;
