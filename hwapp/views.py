@@ -217,9 +217,7 @@ def addhw(request):
                     "status": 400
                 }, status=403)
             data['due_date'] = datetime.strptime(data['due_date'], "%Y-%m-%dT%H:%M")
-            notes = ""
-            if data['notes'] != None:
-                notes=data['notes']
+            notes = data.get('notes', "")
             new_hw = Homework(hw_user=request.user, hw_class=hw_class, hw_title=data['hw_title'], due_date=data['due_date'], completed=False, notes=notes)
             new_hw.save()
             date_ics = data['due_date']
