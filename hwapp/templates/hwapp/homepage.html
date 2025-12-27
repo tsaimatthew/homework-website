@@ -47,8 +47,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  <div class="w3-bar w3-card w3-left-align w3-large" style="background-color: #007bff;">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" style="background-color: #007bff;" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white" onclick="toggle_help('home')">Home</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" onclick="toggle_help('contact')">Contact Us</a>
 
@@ -62,22 +62,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-teal w3-center" style="padding:128px 16px">
+<header class="w3-container w3-center" style="padding:128px 16px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
   <h1 class="w3-margin w3-jumbo">Homework App</h1>
-  <a class="w3-button w3-black w3-padding-large w3-large w3-margin-top" href="{% url 'login' %}">Get Started</a>
+  <p class="w3-xlarge">Your all-in-one assignment tracker and study companion</p>
+  <a class="w3-button w3-padding-large w3-large w3-margin-top" style="background-color: #fff; color: #667eea; border-radius: 4px; font-weight: bold;" href="{% url 'login' %}">Get Started</a>
 </header>
 <div id="home" class="toggle">
   <!-- Zeroeth Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
-      <i class="fa fa-pencil w3-text-red" style="font-size:100px; text-align:center; display:block; margin:auto; margin-top:15%"></i>
+      <i class="fa fa-pencil w3-text-blue" style="font-size:100px; text-align:center; display:block; margin:auto; margin-top:15%; color: #667eea;"></i>
 
     </div>
 
     <div class="w3-twothird">
-      <h1>A FREE Integrated Task Manager</h1>
-      <h5 class="w3-padding-32">Perfect for the busy student who needs to keep track of countless to-do lists!</h5>
+      <h1 style="color: #333;">A FREE Integrated Task Manager</h1>
+      <h5 class="w3-padding-32" style="color: #666;">Perfect for the busy student who needs to keep track of countless to-do lists!</h5>
 
     </div>
   </div>
@@ -86,13 +87,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Export to Your Calendar</h1>
-      <h5 class="w3-padding-32">With iCal feeds for both your Notion and Homework App events, you can easily add your tasks to your calendar</h5>
+      <h1 style="color: #333;">Export to Your Calendar</h1>
+      <h5 class="w3-padding-32" style="color: #666;">With iCal feeds for both your Notion and Homework App events, you can easily add your tasks to your calendar</h5>
 
     </div>
 
     <div class="w3-third w3-center">
-    <i class="fa fa-calendar w3-padding-64 w3-text-red w3-margin-right" style='font-size:100px' ></i>
+    <i class="fa fa-calendar w3-padding-64 w3-margin-right" style='font-size:100px; color: #667eea;'></i>
     </div>
   </div>
 </div>
@@ -101,13 +102,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
-      <i class="fa-solid fa-check w3-text-red" style="font-size:100px; text-align:center; display:block; margin:auto; margin-top:15%"></i>
+      <i class="fa-solid fa-check" style="font-size:100px; text-align:center; display:block; margin:auto; margin-top:15%; color: #667eea;"></i>
 
     </div>
 
     <div class="w3-twothird">
-      <h1>Notion and Google Calendar Integration</h1>
-      <h5 class="w3-padding-32">This app allows users to integrate their tasks from the app with Notion and Google Calendar</h5>
+      <h1 style="color: #333;">Notion and Google Calendar Integration</h1>
+      <h5 class="w3-padding-32" style="color: #666;">This app allows users to integrate their tasks from the app with Notion and Google Calendar</h5>
 
     </div>
   </div>
@@ -117,37 +118,37 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Easily create tasks from your Schoology or Canvas site with a single click!</h1>
-      <h5 class="w3-padding-32">The Homework App makes it easy to keep track of homework or assignments from Schoology or Canvas</h5>
+      <h1 style="color: #333;">Easily create tasks from your Schoology or Canvas site with a single click!</h1>
+      <h5 class="w3-padding-32" style="color: #666;">The Homework App makes it easy to keep track of homework or assignments from Schoology or Canvas</h5>
 
     </div>
 
     <div class="w3-third w3-center">
-    <i class="fa-solid fa-file-lines w3-padding-64 w3-text-red w3-margin-right" style='font-size:100px' ></i>
+    <i class="fa-solid fa-file-lines w3-padding-64 w3-margin-right" style='font-size:100px; color: #667eea;'></i>
     </div>
   </div>
 </div>
 
 
-<h1 style="text-align:center"><b>
+<h1 style="text-align:center; color: #333; margin-top: 3rem;"><b>
   Contact Us!
 </b></h1>
-<div class="toggle" id="contact" style="display:block; clear:both">
+<div class="contact-form-wrapper" id="contact">
   <div id="alert" class="alert alert-success" role="alert" style='display:none;'></div>
 <div id='error_message' class="alert alert-danger" role="alert" style='display:none;'></div>
-  <form action='{% url "contact" %}' method='POST' class='indented' autocomplete='off' autofocus='true' onsubmit = 'return false'>
+  <form action='{% url "contact" %}' method='POST' class='contact-form' autocomplete='off' autofocus='true' onsubmit='return false'>
     {% csrf_token %}
-    <table style='margin-left: 40%;'>
+    <div class="contact-form-inner">
       {{form.as_table}}
-    </table>
-  <button style='margin-left: 45%;' id="submit" onclick = "submit_form()" class="btn btn-primary">Submit</button>
+    </div>
+  <button id="submit" onclick="submit_form()" class="btn btn-primary btn-contact-submit">Submit</button>
 </form>
 
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+<footer class="w3-container w3-padding-64 w3-center w3-opacity" style="background-color: #f8f9fa; margin-top: 3rem;">  
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" style="color: #667eea;">w3.css</a></p>
  
 </footer>
 
