@@ -415,6 +415,7 @@ table tr td {
   color: black;
   padding: 0.5rem 1rem;
   transition: background-color 0.2s ease;
+  display: block;
 }
 .nav_item:hover {
   background: #f8f9fa;

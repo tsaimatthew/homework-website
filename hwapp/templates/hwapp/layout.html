@@ -47,19 +47,19 @@
                 <div class="nav-item collection_all">
                     <a class="nav-link collection_all" href="#">My Bookmarks</a>
                     <div id="collection_all_dropdown" class="collection_all dropdown_css">
-                        <a href="{% url 'pastebin' %}"><div class="nav_item">
+                        <a href="{% url 'pastebin' %}"><span class="nav_item">
                             &nbsp Pastebin &nbsp
-                        </div></a>
-                        <a href="{% url 'filebin' %}"><div class="nav_item">
+                        </span></a>
+                        <a href="{% url 'filebin' %}"><span class="nav_item">
                             &nbsp Filebin &nbsp
-                        </div></a>
-                        <a href="{% url 'all_pages' %}"><div class="nav_item">
+                        </span></a>
+                        <a href="{% url 'all_pages' %}"><span class="nav_item">
                             &nbsp Pages &nbsp
-                        </div></a>
+                        </span></a>
                         {% for page in request.user.bookmarks.all %}
-                        <a href="/page/{{page.version_id}}"><div class="nav_item">
+                        <a href="/page/{{page.version_id}}"><span class="nav_item">
                             &nbsp {{page.template_name}} &nbsp
-                        </div></a>
+                        </span></a>
                         {% endfor %}
                     </div>
                 </div>
@@ -77,19 +77,19 @@
                 <div class="nav-item collection_all">
                     <a class="nav-link collection_all" href="#">My Bookmarks</a>
                     <div id="collection_all_dropdown" class="collection_all dropdown_css">
-                        <a href="{% url 'pastebin' %}" ><div class="nav_item">
+                        <a href="{% url 'pastebin' %}" ><span class="nav_item">
                             &nbsp Pastebin &nbsp
-                        </div></a>
-                        <a href="{% url 'filebin' %}" ><div class="nav_item">
+                        </span></a>
+                        <a href="{% url 'filebin' %}" ><span class="nav_item">
                             &nbsp Filebin &nbsp
-                        </div></a>
-                        <a href="{% url 'all_pages' %}" ><div class="nav_item">
+                        </span></a>
+                        <a href="{% url 'all_pages' %}" ><span class="nav_item">
                             &nbsp Pages &nbsp
-                        </div></a>
+                        </span></a>
                         {% for page in request.user.bookmarks.all %}
-                        <a href="/page/{{page.version_id}}" ><div class="nav_item">
+                        <a href="/page/{{page.version_id}}" ><span class="nav_item">
                             &nbsp {{page.template_name}} &nbsp
-                        </div></a>
+                        </span></a>
                         {% endfor %}
                     </div>
                 </div>
@@ -104,19 +104,19 @@
                 <div class="nav-item collection_all">
                     <a class="nav-link collection_all" href="#">My Bookmarks</a>
                     <div id="collection_all_dropdown" class="collection_all dropdown_css">
-                        <a href="{% url 'pastebin' %}" ><div class="nav_item">
+                        <a href="{% url 'pastebin' %}" ><span class="nav_item">
                             &nbsp Pastebin &nbsp
-                        </div></a>
-                        <a href="{% url 'filebin' %}" ><div class="nav_item">
+                        </span></a>
+                        <a href="{% url 'filebin' %}" ><span class="nav_item">
                             &nbsp Filebin &nbsp
-                        </div></a>
-                        <a href="{% url 'all_pages' %}" ><div class="nav_item">
+                        </span></a>
+                        <a href="{% url 'all_pages' %}" ><span class="nav_item">
                             &nbsp Pages &nbsp
-                        </div></a>
+                        </span></a>
                         {% for page in request.user.bookmarks.all %}
-                        <a href="/page/{{page.version_id}}" ><div class="nav_item">
+                        <a href="/page/{{page.version_id}}" ><span class="nav_item">
                             &nbsp {{page.template_name}} &nbsp
-                        </div></a>
+                        </span></a>
                         {% endfor %}
                     </div>
                 </div>
