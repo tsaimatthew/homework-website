@@ -1,3 +1,100 @@
+/* Navigation Styles */
+.main-nav {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-logo {
+    flex-shrink: 0;
+}
+
+.nav-logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.nav-item {
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-item a:hover {
+    color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.nav-spacer {
+    flex-grow: 1;
+}
+
+.nav-user-info {
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Improve dropdown positioning */
+.dropdown_css {
+  z-index: 999;
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+/* Consistent link styling */
+a {
+    color: #007bff;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Button improvements */
+.btn {
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
 #hwlist {
     float: right;
 }
@@ -136,14 +233,13 @@ only screen and (max-width: 760px),
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 1000; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-	pointer-events: none;
   }
   
   /* The navigation menu links */
@@ -154,6 +250,7 @@ only screen and (max-width: 760px),
     color: #818181;
     display: block;
     transition: 0.3s;
+    pointer-events: auto;
   }
   
   /* When you mouse over the navigation links, change their color */
@@ -186,14 +283,14 @@ only screen and (max-width: 760px),
   display: none;
   position: absolute;
   background-color: white;
-  height: fit-content;
-  width: 150px;
-  border: 0.1px solid lightgray;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-width: 150px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
-  font-size: 18px;
-  font-weight:normal;
-  border-radius: 1%;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 4px;
+  margin-top: 0.5rem;
 }
 
 table tr td {
@@ -205,25 +302,25 @@ table tr td {
 }
 .nav_item {
   color: black;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s ease;
 }
 .nav_item:hover {
-  background: lightgray;
+  background: #f8f9fa;
 }
 .dropdown_css {
   z-index: 999;
   display: none;
   position: absolute;
   background-color: white;
-  height: fit-content;
-  width: fit-content;
-  border: 0.1px solid lightgray;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  font-size: 18px;
-  font-weight:normal;
-  border-radius: 1%;
-  margin-left:1%;
-  width:8%
+  min-width: 150px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 4px;
+  margin-top: 0.5rem;
 }
 .ics_form {
   margin-top:5%;
@@ -254,14 +351,14 @@ table tr td {
   display: none;
   position: absolute;
   background-color: white;
-  height: fit-content;
-  width: 150px;
-  border: 0.1px solid lightgray;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-width: 150px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
-  font-size: 18px;
-  font-weight:normal;
-  border-radius: 1%;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 4px;
+  margin-top: 0.5rem;
 }
 .mobile_nav {
   display:none;
@@ -269,20 +366,18 @@ table tr td {
 @media
 only screen and (max-width: 760px),
 (min-device-width: 0px) and (max-device-width: 1024px) {
-  .nav-item {
+  .nav-links .nav-item {
     display:none;
   }
 .mobile_nav {
 	display: block;
-    margin-left: 0; /* Remove the 110% */
-    position: relative; 
-    z-index: 10;
+    margin-left: auto;
 }
   .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
     left: 0;
     background-color: #111;
@@ -298,6 +393,7 @@ only screen and (max-width: 760px),
     color: #818181;
     display: block;
     transition: 0.3s;
+    pointer-events: auto;
   }
   
   .sidenav a:hover {
