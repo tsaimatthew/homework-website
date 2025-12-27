@@ -22,9 +22,6 @@ RUN pip install --no-cache-dir -r requirements.txt gunicorn
 # Copy the rest of your project files
 COPY . .
 
-# Collect static files (these will be served by the NGINX container)
-RUN python manage.py collectstatic --noinput
-
 # Set permissions
 RUN chown -R www-data:www-data /var/www/homework-website
 
@@ -33,4 +30,4 @@ EXPOSE 8000
 
 # Start Gunicorn
 # Replace 'mywebsite.wsgi:application' with your actual path if it differs
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "mywebsite.wsgi:application"]
+CMD ["sh", "-c", "python manage.py collectstatic --noinput --clear && gunicorn --bind 0.0.0.0:8000 --workers 2 mywebsite.wsgi:application"]
