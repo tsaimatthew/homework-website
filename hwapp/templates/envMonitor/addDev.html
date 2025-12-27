@@ -30,6 +30,17 @@ Add a Device
                 location: `${document.getElementById('location').value}`,
             })
         })
+        .then(response => {
+            if (response.ok) {
+                alert("Device added successfully!");
+            } else {
+                alert("Failed to add device. Please try again.");
+            }
+        })
+        .catch(error => {
+            console.error("Error adding device:", error);
+            alert("An error occurred while adding the device. Please check your connection and try again.");
+        });
     }
 </script>
 {% endblock %}
