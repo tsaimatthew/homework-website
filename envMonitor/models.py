@@ -20,7 +20,7 @@ class RfidAction(models.Model):
 
 class TemperatureReading(models.Model):
     device = models.ForeignKey(Device, on_delete=models.CASCADE)
-    temperature = models.IntegerField()
+    temperature = models.FloatField()
     date = models.DateTimeField()
     unit = models.CharField(max_length=11 ,choices=(("Celsius","Celsius"), ("Fahrenheit", "Fahrenheit")))
 
