@@ -6,7 +6,7 @@ python-dotenv==0.17.1
 pytz==2021.1
 requests==2.32.4
 sentry_sdk
-virtualenv==20.26.6
+virtualenv==20.36.1
 whitenoise==5.2.0
 azure-communication-email
 django-model-utils
